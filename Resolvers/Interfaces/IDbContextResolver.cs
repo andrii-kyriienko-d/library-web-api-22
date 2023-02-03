@@ -2,7 +2,7 @@
 
 namespace LibraryWebApi.Resolvers.Interfaces;
 
-public interface IDbContextResolver
+internal interface IDbContextResolver
 {
-    public IDbContext Resolve(string dbType);
+    IDbContext Resolve(string dbType);
 }

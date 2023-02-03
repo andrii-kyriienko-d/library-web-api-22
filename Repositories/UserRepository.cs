@@ -5,20 +5,20 @@ using System.Linq;
 
 namespace LibraryWebApi.Repositories;
 
-public sealed class UserRepository : IUserRepository
+internal sealed class UserRepository : IUserRepository
 {
-    private List<UserDTO> _users { get; set; } = new List<UserDTO>();
+    private List<UserDataToObjectModel> _users { get; set; } = new List<UserDataToObjectModel>();
 
     public UserRepository()
     {
-        _users.Add(new UserDTO
+        _users.Add(new UserDataToObjectModel
         {
             UserName = "admin",
             Password = "admin",
             Role = "admin"
         });
     }
-    public UserDTO GetUser(UserModel userModel)
+    public UserDataToObjectModel GetUser(UserModel userModel)
     {
         return _users.Where(x => x.UserName.ToLower() == userModel.UserName.ToLower()
                                  && x.Password == userModel.Password).FirstOrDefault();

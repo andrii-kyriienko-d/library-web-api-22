@@ -1,6 +1,5 @@
 ﻿using ClosedXML.Excel;
 using LibraryWebApi.Entities.Interfaces;
-using LibraryWebApi.Extentions;
 using LibraryWebApi.Models.RequestModels;
 using LibraryWebApi.Repositories.Interfaces;
 using LibraryWebApi.Services.Interfaces;
@@ -12,11 +11,12 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
+using LibraryWebApi.Extensions;
 using ToDataTable;
 
 namespace LibraryWebApi.Services;
 
-public abstract class BaseService<T> : IBaseService<T> where T : class, IEntityId, new()
+internal abstract class BaseService<T> : IBaseService<T> where T : class, IEntityId, new()
 {
     private readonly IRepository<T> _entityRepository;
     private readonly IMemoryCache _cache;

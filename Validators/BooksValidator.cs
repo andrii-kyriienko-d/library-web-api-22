@@ -3,7 +3,7 @@ using LibraryWebApi.Entities;
 
 namespace LibraryWebApi.Validators;
 
-internal class BooksValidator : AbstractValidator<Books>
+internal sealed class BooksValidator : AbstractValidator<Books>
 {
     public BooksValidator()
     {

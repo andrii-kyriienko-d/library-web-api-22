@@ -4,7 +4,6 @@ using LibraryWebApi.Models.OptionsModels;
 using LibraryWebApi.Repositories.Interfaces;
 using LibraryWebApi.Services.Interfaces;
 using LibraryWebApi.Services.TokenService;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 
 namespace LibraryWebApi.Services;
@@ -41,7 +40,7 @@ internal sealed class LoginService : ILoginService
         return generatedToken;
     }
 
-    private UserDTO GetUser(UserModel userModel)
+    private UserDataToObjectModel GetUser(UserModel userModel)
     {
         return _userRepository.GetUser(userModel);
     }

@@ -2,7 +2,6 @@
 using LibraryWebApi.Services.Interfaces;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
-using System;
 using System.IO;
 using System.Linq;
 

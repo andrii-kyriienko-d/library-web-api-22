@@ -1,6 +1,6 @@
 ﻿namespace LibraryWebApi.Models.OptionsModels;
 
-public sealed class FileLoggerOptions
+internal sealed class FileLoggerOptions
 {
     public string FolderPath { get; set; }
     public string Append { get; set; }

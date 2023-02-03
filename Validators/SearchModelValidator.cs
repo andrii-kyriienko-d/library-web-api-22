@@ -3,7 +3,7 @@ using LibraryWebApi.Models.RequestModels;
 
 namespace LibraryWebApi.Validators;
 
-internal class SearchModelValidator : AbstractValidator<SearchModel>
+internal sealed class SearchModelValidator : AbstractValidator<SearchModel>
 {
     public SearchModelValidator()
     {

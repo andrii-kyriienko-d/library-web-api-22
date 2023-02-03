@@ -4,5 +4,5 @@ namespace LibraryWebApi.Services.Interfaces;
 
 public interface ILoginService
 {
-    public string GenerateToken(UserModel userModel);
+    string GenerateToken(UserModel userModel);
 }

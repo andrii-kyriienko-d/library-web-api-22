@@ -5,6 +5,6 @@ namespace LibraryWebApi.Repositories.Interfaces;
 
 internal interface IReaderBookRepository : IRepository<ReaderBook>
 {
-    public List<Readers> GetReadersForBook(Books entity);
-    public List<Books> GetBooksForReader(Readers entity);
+    IEnumerable<Readers> GetReadersForBook(Books entity);
+    IEnumerable<Books> GetBooksForReader(Readers entity);
 }

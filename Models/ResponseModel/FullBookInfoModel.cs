@@ -1,6 +1,6 @@
 ﻿namespace LibraryWebApi.Models.ResponseModel;
 
-internal class FullBookInfoModel
+internal sealed class FullBookInfoModel
 {
     public int Id { get; set; }
     public string Name { get; set; }

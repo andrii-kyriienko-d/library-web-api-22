@@ -2,5 +2,5 @@
 
 public interface ILastLogGetter
 {
-    public string GetLastLog();
+    string GetLastLog();
 }

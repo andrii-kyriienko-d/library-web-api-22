@@ -4,5 +4,5 @@ namespace LibraryWebApi.Services.Interfaces;
 
 public interface IBookFullInfo
 {
-    public BooksViewModel GetFullInfo(int id);
+    BooksViewModel GetFullInfo(int id);
 }

@@ -1,7 +1,5 @@
 ﻿using LibraryWebApi.Entities;
 using LibraryWebApi.Repositories.Interfaces;
-using LibraryWebApi.Services.Interfaces;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Caching.Memory;
 
 namespace LibraryWebApi.Services;

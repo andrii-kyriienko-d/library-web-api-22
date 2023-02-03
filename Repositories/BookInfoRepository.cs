@@ -7,7 +7,6 @@ using LibraryWebApi.Resolvers.Interfaces;
 using Microsoft.Extensions.Options;
 using SqlKata.Execution;
 using System;
-using System.Data;
 using System.Linq;
 using LibraryWebApi.Entities;
 using LibraryWebApi.Models.OptionsModels;

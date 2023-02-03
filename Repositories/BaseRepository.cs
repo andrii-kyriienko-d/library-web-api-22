@@ -8,7 +8,6 @@ using SqlKata;
 using SqlKata.Execution;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using LibraryWebApi.Models.OptionsModels;
 using LibraryWebApi.Repositories.Interfaces;

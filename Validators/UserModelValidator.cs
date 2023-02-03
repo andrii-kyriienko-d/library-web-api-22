@@ -3,7 +3,7 @@ using LibraryWebApi.Models.AuthModels;
 
 namespace LibraryWebApi.Validators;
 
-internal class UserModelValidator : AbstractValidator<UserModel>
+internal sealed class UserModelValidator : AbstractValidator<UserModel>
 {
     public UserModelValidator()
     {

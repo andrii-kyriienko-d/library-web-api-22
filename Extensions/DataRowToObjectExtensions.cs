@@ -2,9 +2,9 @@
 using System.Data;
 using System.Linq;
 
-namespace LibraryWebApi.Extentions;
+namespace LibraryWebApi.Extensions;
 
-internal static class DataRowToObjectExtentions
+internal static class DataRowToObjectExtensions
 {
     public static T ToObject<T>(this DataRow dataRow)
         where T : new()

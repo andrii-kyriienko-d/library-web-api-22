@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace LibraryWebApi.Resolvers;
 
-public class DbContextResolver : IDbContextResolver
+internal sealed class DbContextResolver : IDbContextResolver
 {
     private readonly IEnumerable<IDbContext> _dbContexts;
 

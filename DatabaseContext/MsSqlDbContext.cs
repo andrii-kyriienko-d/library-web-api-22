@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 namespace LibraryWebApi.DatabaseContextFactory;
 
 [DbType(Name = "mssql")]
-public sealed class MsSqlDbContext : BaseDbContext
+internal sealed class MsSqlDbContext : BaseDbContext
 {
     public override Compiler GetCompiler()
     {

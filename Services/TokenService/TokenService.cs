@@ -7,11 +7,11 @@ using System.Text;
 
 namespace LibraryWebApi.Services.TokenService;
 
-internal class TokenService : ITokenService
+internal sealed class TokenService : ITokenService
 {
     private const int EXPIRY_DURATION_MINUTES = 180;
 
-    public string BuildToken(string key, string issuer, UserDTO user)
+    public string BuildToken(string key, string issuer, UserDataToObjectModel user)
     {
         var claims = new[] {
             new Claim(ClaimTypes.Name, user.UserName),

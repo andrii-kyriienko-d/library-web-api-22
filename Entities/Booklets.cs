@@ -5,7 +5,7 @@ using System;
 namespace LibraryWebApi.Entities;
 
 [DbTableName(TableName = "Booklets")]
-public class Booklets : IEntityId, IEntityDateInfo
+public sealed class Booklets : IEntityId, IEntityDateInfo
 {
     public int Id { get; set; }
     public string FullName { get; set; }

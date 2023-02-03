@@ -5,7 +5,7 @@ using System.Data;
 
 namespace LibraryWebApi.DatabaseContextFactory;
 
-public abstract class BaseDbContext : IDbContext
+internal abstract class BaseDbContext : IDbContext
 {
     public abstract Compiler GetCompiler();
     public abstract IDbConnection GetConnection(DatabaseOptions dbOptions);

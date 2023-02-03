@@ -5,12 +5,9 @@ using LibraryWebApi.Models.OptionsModels;
 using LibraryWebApi.Repositories.Interfaces;
 using LibraryWebApi.Resolvers.Interfaces;
 using Microsoft.Extensions.Options;
-using Npgsql;
-using SqlKata.Compilers;
 using SqlKata.Execution;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 
 namespace LibraryWebApi.Repositories;
@@ -21,7 +18,7 @@ internal sealed class ReaderToBookRepository : BaseRepository<ReaderBook>, IRead
     {
     }
 
-    public List<Readers> GetReadersForBook(Books entity)
+    public IEnumerable<Readers> GetReadersForBook(Books entity)
     {
         using var connection = DbContext.GetConnection(DbOptions);
         var compiler =  DbContext.GetCompiler();
@@ -43,7 +40,7 @@ internal sealed class ReaderToBookRepository : BaseRepository<ReaderBook>, IRead
             .Get<Readers>()
             .ToList();
     }
-    public List<Books> GetBooksForReader(Readers entity)
+    public IEnumerable<Books> GetBooksForReader(Readers entity)
     {
         using var connection = DbContext.GetConnection(DbOptions);
         var compiler = DbContext.GetCompiler();

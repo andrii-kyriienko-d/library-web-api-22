@@ -43,7 +43,7 @@ public class Startup
     {
         services.AddMvc()
             .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<BooksValidator>());
-           
+        
         AddOptions(services);
         AddJwt(services);
         AddDbContexts(services);
@@ -62,7 +62,6 @@ public class Startup
 
         services.AddMemoryCache();
         services.AddControllers();
-
     }
 
     private void AddDbContexts(IServiceCollection services)

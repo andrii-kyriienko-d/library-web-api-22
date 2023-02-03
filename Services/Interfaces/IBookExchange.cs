@@ -5,8 +5,8 @@ namespace LibraryWebApi.Services.Interfaces;
 
 public interface IBookExchange
 {
-    public IEnumerable<Readers> GetReadersForBook(int id);
-    public void GiveBookToReader(int id, Readers reader);
-    public IEnumerable<Books> GetBooks(int id);
-    public void GiveBookToReaderById(int id, Books book);
+    IEnumerable<Readers> GetReadersForBook(int id);
+    void GiveBookToReader(int id, Readers reader);
+    IEnumerable<Books> GetBooks(int id);
+    void GiveBookToReaderById(int id, Books book);
 }

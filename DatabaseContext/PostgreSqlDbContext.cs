@@ -7,7 +7,7 @@ using System.Data;
 namespace LibraryWebApi.DatabaseContextFactory;
 
 [DbType(Name = "postgresql")]
-public sealed class PostgreSqlDbContext : BaseDbContext
+internal sealed class PostgreSqlDbContext : BaseDbContext
 {
     public override Compiler GetCompiler()
     {

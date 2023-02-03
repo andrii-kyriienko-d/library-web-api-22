@@ -2,7 +2,7 @@
 
 namespace LibraryWebApi.Repositories.Interfaces;
 
-public interface IUserRepository
+internal interface IUserRepository
 {
-    public UserDTO GetUser(UserModel userModel);
+    UserDataToObjectModel GetUser(UserModel userModel);
 }

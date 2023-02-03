@@ -2,7 +2,7 @@
 
 namespace LibraryWebApi.Exceptions;
 
-internal class BusinessException : Exception
+internal sealed class BusinessException : Exception
 {
     public BusinessException(string message) : base(message)
     {

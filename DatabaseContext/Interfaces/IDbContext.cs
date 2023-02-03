@@ -4,7 +4,7 @@ using System.Data;
 
 namespace LibraryWebApi.DatabaseContextFactory.Interfaces;
 
-public interface IDbContext
+internal interface IDbContext
 {
     public IDbConnection GetConnection(DatabaseOptions dbOptions);
     public Compiler GetCompiler();
