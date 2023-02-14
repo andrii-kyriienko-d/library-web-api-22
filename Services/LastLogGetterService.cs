@@ -21,7 +21,6 @@ internal sealed class LastLogGetterService : ILastLogGetter
     {
         var lastLogData = "";
 
-
         var file =
             new DirectoryInfo(_fileLoggerOptions.FolderPath)
                 .GetFiles()

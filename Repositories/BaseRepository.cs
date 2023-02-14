@@ -191,7 +191,7 @@ internal abstract class BaseRepository<T> : IRepository<T>
 
         }
 
-        SqlResult finalQueryResult = compiler.Compile(findQuery);
+        var finalQueryResult = compiler.Compile(findQuery);
 
         var result = db.FromQuery(finalQueryResult.Query).Get<T>().AsEnumerable();
         items.AddRange(result);

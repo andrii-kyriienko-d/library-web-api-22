@@ -9,7 +9,7 @@ namespace LibraryWebApi.Services.TokenService;
 
 internal sealed class TokenService : ITokenService
 {
-    private const int EXPIRY_DURATION_MINUTES = 180;
+    private const int ExpiryDurationMinutes = 180;
 
     public string BuildToken(string key, string issuer, UserDataToObjectModel user)
     {
@@ -23,7 +23,7 @@ internal sealed class TokenService : ITokenService
         var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
         var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
         var tokenDescriptor = new JwtSecurityToken(issuer, issuer, claims,
-            expires: DateTime.Now.AddMinutes(EXPIRY_DURATION_MINUTES), signingCredentials: credentials);
+            expires: DateTime.Now.AddMinutes(ExpiryDurationMinutes), signingCredentials: credentials);
         return new JwtSecurityTokenHandler().WriteToken(tokenDescriptor);
     }
 

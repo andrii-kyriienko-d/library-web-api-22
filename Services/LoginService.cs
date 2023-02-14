@@ -29,9 +29,7 @@ internal sealed class LoginService : ILoginService
         {
             throw new BusinessException("User not valid");
         }
-        generatedToken = _tokenService.BuildToken(_jwtOptions.Key
-            .ToString(), _jwtOptions.Issuer
-            .ToString(), validUser);
+        generatedToken = _tokenService.BuildToken(_jwtOptions.Key, _jwtOptions.Issuer, validUser);
 
         if (generatedToken == null)
         {
