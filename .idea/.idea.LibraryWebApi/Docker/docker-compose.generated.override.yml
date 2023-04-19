@@ -1,0 +1,22 @@
+# This is a generated file. Not intended for manual editing.
+version: "3.4"
+services:
+  librarywebapi:
+    build:
+      context: "C:\\Users\\Andrey\\RiderProjects\\library-web-api-22"
+      dockerfile: "Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Release/net7.0/LibraryWebApi.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_URLS: "https://+:443;http://+:80"
+    image: "darinx64/libraryapi:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\Andrey\\AppData\\Roaming\\ASP.NET\\Https:/root/.aspnet/https"
+    - "C:\\Users\\Andrey\\AppData\\Roaming\\Microsoft\\UserSecrets:/root/.microsoft/usersecrets"
+    - "C:\\Users\\Andrey\\RiderProjects\\library-web-api-22:/app:rw"
+    working_dir: "/app"

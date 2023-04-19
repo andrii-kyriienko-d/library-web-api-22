@@ -20,7 +20,7 @@ internal sealed class DbContextResolver : IDbContextResolver
     {
         var context = _dbContexts
             .FirstOrDefault(dbcontext => ((DbTypeAttribute)Attribute
-                .GetCustomAttribute(dbcontext.GetType(), typeof(DbTypeAttribute))).Name == dbType);
+                .GetCustomAttribute(dbcontext.GetType(), typeof(DbTypeAttribute)))?.Name == dbType);
 
         if(context == null)
         {

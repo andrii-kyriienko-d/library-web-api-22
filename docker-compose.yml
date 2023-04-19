@@ -1,0 +1,36 @@
+﻿version: '3.4'
+
+networks:
+  libraryapi-dev:
+    driver: bridge
+
+services:
+  librarywebapi:
+    image: darinx64/libraryapi
+    depends_on:
+      - "postgres_image"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - libraryapi-dev 
+    ports:
+      - "80:80"
+  
+  postgres_image:
+    image: postgres:latest
+    ports:
+      - "5432"
+    restart: always
+    volumes:
+      - db_volume:/var/lib/postgresql/data
+      - ./dbscripts/db.sql :/docker-entrypoint-initdb.d/seed.sql
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "1111"
+      POSTGRES_DB: "libraryDb"
+    networks:
+      - libraryapi-dev
+        
+volumes:
+  db_volume:
